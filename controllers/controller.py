@@ -4,7 +4,7 @@ from unicodedata import name
 from flask import render_template, redirect, request
 from app import app
 from models.book import Book
-from models.books import books, add_new_book, delete_book, update_status
+from models.books import books, add_new_book, delete_book
 
 @app.route('/')
 def enter():
@@ -39,8 +39,4 @@ def delete(title):
    delete_book(title)
    return redirect('/library')
 
-@app.route('/library/<index>', methods=['POST'])
-def update(checkout):
-    update_status(checkout)
-    return redirect('/library')
 
