@@ -2,16 +2,14 @@
 
 {% block content %}
 
-    <div class="book-container">
+        <div class="book-container">
             <h1 class="book-title">Book:</h1>
+        </div>
                 <div class="book">
                     <h2>{{ book.title }}</h2>
                     <h3>{{ book.author }}</h3>
                     <h4>{{ book.genre }}</h4>   
                 
-                </div>
-
-                <div>
                     <form action="/library/{{ index }}" method="POST">
                         {% if book.checkedout == True %}
                             <label for="checkedout">Check In:</label>
@@ -23,7 +21,6 @@
                         {% endif %}
                     </form>
                 </div>
-    </div>
 
 
 {% endblock %}
