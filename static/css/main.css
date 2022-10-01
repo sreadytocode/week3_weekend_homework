@@ -68,9 +68,15 @@ footer {
     text-align: center;
     padding-block-end: 2rem;
     min-height: 50px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 99%;
     height: 2.5rem;
     color: darkblue;
+}
+
+.book-title{
+    text-align: justify;
+    padding-left: 1.5rem;
+
 }

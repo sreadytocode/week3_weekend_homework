@@ -34,7 +34,7 @@
             
             <a class="singlebook" href="/library/{{books.index(book)}}">Show Book</a>
             
-            {% if book.checkedout %}
+            {% if book.checkedout == True %}
                 <p><i>Checked Out Sorry!</i></p>
                     <span>&#10060;</span>
                 <p><i>Return By: {{ book.return_by.strftime("%b %d %Y") }}</i></p>
