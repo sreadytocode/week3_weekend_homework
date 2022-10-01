@@ -1,3 +1,4 @@
+
 .header {
     background-color: #B0C4DE;
     background-image: url("blue_background.jpeg");
@@ -5,7 +6,7 @@
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
-    padding: 2.0rem;
+    padding: 0.5rem;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +31,7 @@ body {
     color: white;
     font-size: 1rem;
     border-radius: 1rem;
+    min-height: calc(100vh - 196.56px - 66px);
 }
 
 .singlebook {
@@ -50,6 +52,10 @@ body {
    align-items: center;
 }
 
+.book-container {
+    position: relative;
+}
+
 .subheading {
     align-items: center;
     text-align: center;
@@ -59,20 +65,21 @@ body {
 }
 
 footer {
-    display: flex;
+    display: block;
     flex-direction: column;
     background-color: #B0C4DE;
     background-image: url("blue_background.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    padding-block-end: 2rem;
+    align-items: center;
     min-height: 50px;
     position: fixed;
     bottom: 0;
     width: 99%;
-    height: 2.5rem;
+    height: 30px;
     color: darkblue;
+    padding: 0.5rem;
 }
 
 .book-title{

@@ -20,3 +20,11 @@ def delete_book(book_title):
             break
 
     books.remove(book_to_delete)
+
+def update_status(status):
+    for book in books:
+        if book.checkedout == True:
+            status = False
+            break
+
+    books.append(status)
