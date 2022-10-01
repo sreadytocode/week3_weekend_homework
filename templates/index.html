@@ -25,31 +25,31 @@
     
 </form>
 <hr>
-<div class="book-container">
-        {% for book in books %}
-        <div class="book">
-            <h2>{{ book.title }}</h2>
-            <h3>{{ book.author }}</h3>
-            <h4>{{ book.genre }}</h4>
+    <div class="book-container">
+            {% for book in books %}
+            <div class="book">
+                <h2>{{ book.title }}</h2>
+                <h3>{{ book.author }}</h3>
+                <h4>{{ book.genre }}</h4>
+                
+                <a class="singlebook" href="/library/{{books.index(book)}}"><i class="fa-solid fa-book-open"></i></a>
+                
+                {% if book.checkedout == True %}
+                    <p><i>Checked Out Sorry!</i></p>
+                        <span>&#10060;</span>
+                    <p><i>Return By: {{ book.return_by.strftime("%b %d %Y") }}</i></p>
+                {% else %}
+                    <p><i>Available To Check Out!</i></p>
+                        <span>&#9989</span>
+                {% endif %}
             
-            <a class="singlebook" href="/library/{{books.index(book)}}">Show Book</a>
-            
-            {% if book.checkedout == True %}
-                <p><i>Checked Out Sorry!</i></p>
-                    <span>&#10060;</span>
-                <p><i>Return By: {{ book.return_by.strftime("%b %d %Y") }}</i></p>
-            {% else %}
-                <p><i>Available To Check Out!</i></p>
-                    <span>&#9989</span>
-            {% endif %}
-        
 
-                <form action="/library/delete/{{ book.title }}" method="POST">
-                    <input type="submit" value="Delete">
-                </form>
+                    <form action="/library/delete/{{ book.title }}" method="POST">
+                        <input type="submit" value="Delete">
+                    </form>
 
-        </div>
-        {% endfor %}
+            </div>
+            {% endfor %}
     </div>
     
 {% endblock %}

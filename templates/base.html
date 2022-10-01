@@ -9,21 +9,23 @@
     <title>Library</title>
 </head>
 
-<body class="image">
-    <header>
-        <section class="header">
-        <h1>Welcome to the Library!</h1>
-        <ul class="navlink">
-            <li>
-                <a href="/library"><i class="fa-solid fa-house"></i></a>
-            </li>
-        </ul>
+<body>
+    <header class="header">
+        <section >
+            <h1>Welcome to the Library!</h1>
+            <ul>
+                <li class="navLink">
+                    <a class="icon" href="/library"><i class="fa-solid fa-house"></i></a>
+                </li>
+            </ul>
         </section>
     </header>
-    <hr>
-    {% block content %} {% endblock %}
+        <hr>
+            {% block content %} {% endblock %}
 </body>
+
 <footer>
     <p>&copy;Copyright 2022 Sara Qureshi</p>
 </footer>
+
 </html>

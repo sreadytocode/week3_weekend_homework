@@ -1,5 +1,5 @@
 
-.header {
+header {
     background-color: #B0C4DE;
     background-image: url("blue_background.jpeg");
     background-repeat: no-repeat;
@@ -12,13 +12,15 @@
     align-items: center;
     font-size: 1.4rem;
     color: darkblue;
+    text-align: center;
+    list-style: none;
+    
     
 }
 
-.navlink {
+.navLink {
     list-style: none;
-    display: flex;
-    color: aliceblue;
+
 }
 
 body {
@@ -36,6 +38,10 @@ body {
 
 .singlebook {
     color: aliceblue;
+}
+
+.icon {
+    color: darkblue;
 }
 
 .book {
