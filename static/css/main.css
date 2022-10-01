@@ -11,6 +11,7 @@
     align-items: center;
     font-size: 1.4rem;
     color: darkblue;
+    
 }
 
 .navlink {
@@ -55,4 +56,20 @@ body {
     align-content: space-between;
     font-size: 1.5rem;
     
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #B0C4DE;
+    background-image: url("blue_background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-block-end: 2rem;
+    min-height: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    height: 2.5rem;
 }
