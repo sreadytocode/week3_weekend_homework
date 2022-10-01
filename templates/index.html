@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="subheading">All Library Books!</h1>
+
+    <form class="subheading" action="/library" method="post">
+
+        
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title">
+        
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author">
+        
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" id="genre">
+        
+        <label for="checkedout">Checked Out:</label>
+        <input type="checkbox" name="checkedout" id="checkedout" value="False">
+        
+        <label for="return_by">Return By:</label>
+        <input type="date" name="return_by" id="return_by">
+        
+        <input type="submit" value="Add Book" >
+    </form>
+    <hr>
+    <div class="book-container">
+        {% for book in books %}
+        <div class="book">
+            <h2>{{ book.title }}</h2>
+            <h3>{{ book.author }}</h3>
+            <h4>{{ book.genre }}</h4>
+            
+            <a class="singlebook" href="/library/{{books.index(book)}}">Show Book</a>
+            
+            {% if book.checkedout %}
+                <p><i>Checked Out Sorry!</i></p>
+                    <span>&#10060;</span>
+                <p><i>Return By: {{ book.return_by.strftime("%b %d %Y") }}</i></p>
+            {% else %}
+                <p><i>Available To Check Out!</i></p>
+                    <span>&#9989</span>
+            {% endif %}
+        
+
+                <form action="/library/delete/{{ book.title }}" method="POST">
+                    <input type="submit" value="Delete">
+                </form>
+
+        </div>
+        {% endfor %}
+    </div>
+    
+{% endblock %}

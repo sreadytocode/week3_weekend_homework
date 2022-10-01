@@ -1,0 +1,58 @@
+.header {
+    background-color: #B0C4DE;
+    background-image: url("blue_background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.0rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    color: darkblue;
+}
+
+.navlink {
+    list-style: none;
+    display: flex;
+    color: aliceblue;
+}
+
+body {
+    background-image: url("book.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #F0F8FF;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+
+.singlebook {
+    color: aliceblue;
+}
+
+.book {
+   display: grid; 
+   columns: 3 auto;
+   align-content: space-between;
+   font-size: 1.3rem;
+   grid-auto-flow: column;
+   border: white double;
+   margin: 1.5rem;
+   padding: 1rem;
+   text-align: center;
+   grid : nowrap;
+   align-items: center;
+}
+
+.subheading {
+    align-items: center;
+    text-align: center;
+    align-content: space-between;
+    font-size: 1.5rem;
+    
+}
