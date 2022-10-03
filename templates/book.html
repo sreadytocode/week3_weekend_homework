@@ -10,14 +10,15 @@
                     <h3>{{ book.author }}</h3>
                     <h4>{{ book.genre }}</h4>   
                 
+                
                     <form action="/library/{{ index }}" method="POST">
                         {% if book.checkedout == True %}
                             <label for="checkedout">Check In:</label>
-                            <input type="checkbox" name="checkedout" id="False" value="False">
+                            <input type="checkbox" name="checkedout" id="True" value="True">
                             
                         {% else %}
                             <label for="checkedout">Check Out:</label>
-                            <input type="checkbox" name="checkedout" id="True" value="True">
+                            <input type="checkbox" name="checkedout" id="False" value="False">
                         {% endif %}
                     </form>
                 </div>
